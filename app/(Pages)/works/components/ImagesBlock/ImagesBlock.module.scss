@@ -1,7 +1,10 @@
 @use "variables";
 
 .imagesBlock {
+  height: 100%;
+
   &__inner {
+    height: calc(100vh - 88px);
     position: relative;
     overflow: auto;
     padding-top: 100px;
