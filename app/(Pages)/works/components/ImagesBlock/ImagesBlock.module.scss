@@ -6,9 +6,19 @@
     overflow: auto;
     padding-top: 100px;
     margin-top: -100px;
-    height: calc(100vh - 88px);
     padding-right: 40px;
     margin-right: -40px;
+
+    height: calc(100vh - 88px);
+
+    @media screen and (max-width: 768px) {
+      height: calc(100vh - 64px);
+      margin-top: -120px;
+    }
+
+    @media screen and (max-width: 375px) {
+      height: calc(100vh - 48px);
+    }
 
     &::-webkit-scrollbar {
       width: 4px;
@@ -33,6 +43,10 @@
     right: 11%;
     translate: -11% -55%;
     z-index: 1;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__top {
@@ -44,10 +58,15 @@
 
   &__textBlock {
     max-width: 282px;
+    margin-left: 56px;
   }
 
   &__text {
     margin-bottom: 32px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 1rem;
+    }
   }
 
   &__quote {
@@ -65,6 +84,10 @@
       right: 6px;
       translate: 50% 100%;
       z-index: 1;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
@@ -76,6 +99,10 @@
 
     &_bottom {
       max-width: 478px;
+
+      &:first-of-type {
+        margin-right: 64px;
+      }
     }
 
     img {
@@ -87,18 +114,15 @@
   &__imgText {
     line-height: 11px;
     color: variables.$teritrary;
+    font-size: 16px;
+    position: absolute;
+    bottom: -16px;
+    translate: 0 100%;
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
-  }
-
-  &__imgText {
-    font-size: 16px;
-    position: absolute;
-    bottom: -16px;
-    translate: 0 100%;
   }
 }

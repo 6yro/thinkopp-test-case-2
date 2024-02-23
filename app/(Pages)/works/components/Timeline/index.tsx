@@ -8,7 +8,11 @@ const Timeline = () => {
   const [linesCount, setLinesCount] = useState(0);
 
   useEffect(() => {
-    setLinesCount(Math.round((window.innerHeight - 88) / 22));
+    const windowWidth = window.innerWidth;
+
+    const mediaValue = windowWidth > 768 ? 88 : 0;
+
+    setLinesCount(Math.round((window.innerHeight - mediaValue) / 22));
   }, []);
 
   return (

@@ -40,7 +40,7 @@ const Header = () => {
                       pathname === "/works" && s.nav__link_active
                     )}
                   >
-                    <Link href="#">работы</Link>
+                    <Link href="works">работы</Link>
                   </li>
                   <li
                     className={clsx(

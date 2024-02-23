@@ -4,18 +4,50 @@
   max-width: 307px;
   padding-left: 32px;
 
+  @media screen and (max-width: 768px) {
+    padding-left: 8px;
+    max-width: 256px;
+  }
+
+  @media screen and (max-width: 375px) {
+    max-width: 249px;
+  }
+
   &_centered {
     position: absolute;
     top: 50%;
     translate: 0 -100%;
+
+    @media screen and (max-width: 375px) {
+      top: 30%;
+      translate: 0 -100%;
+    }
   }
 
   &__year {
+    display: block;
     font-weight: 300;
     font-size: 44px;
-    line-height: 48.4px;
     letter-spacing: -1.76px;
-    margin-bottom: 24px;
+    line-height: 31px;
     color: variables.$accent;
+
+    @media screen and (max-width: 768px) {
+      font-size: 26px;
+      letter-spacing: -1.04px;
+      line-height: 18px;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 28px;
+    }
+  }
+
+  &__text {
+    margin-top: 24px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 16px;
+    }
   }
 }

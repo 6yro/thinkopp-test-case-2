@@ -1,11 +1,32 @@
 @use "variables";
 
 .works {
+  overflow: hidden;
   background: 50% -88px / contain no-repeat url("../../assets/works/tsoy.png");
   height: calc(100vh - 88px);
 
   &_colorImg {
     background: 50% -88px / contain no-repeat url("../../assets/works/tsoy_color.png");
+  }
+
+  @media screen and (max-width: 768px) {
+    background: 0 300% / contain no-repeat url("../../assets/works/tsoy.png");
+    height: calc(100vh - 64px);
+
+    &_colorImg {
+      background: 0 300% / contain no-repeat
+        url("../../assets/works/tsoy_color.png");
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    background: 0 85% / contain no-repeat url("../../assets/works/tsoy.png");
+    height: calc(100vh - 48px);
+
+    &_colorImg {
+      background: 0 85% / contain no-repeat
+        url("../../assets/works/tsoy_color.png");
+    }
   }
 
   &__dateWrapper {
@@ -15,6 +36,16 @@
     width: fit-content;
     position: relative;
     z-index: 2;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 32px;
+      margin-left: -28px;
+    }
+
+    @media screen and (max-width: 375px) {
+      padding-top: 36px;
+      margin-left: -16px;
+    }
   }
 
   &__colorBtn {
@@ -27,11 +58,33 @@
     z-index: 2;
     color: variables.$teritrary;
 
+    @media screen and (max-width: 768px) {
+      left: 60%;
+      top: 31%;
+    }
+
+    @media screen and (max-width: 375px) {
+      height: fit-content;
+      top: auto;
+      bottom: 2.5%;
+      left: 50%;
+      translate: -50%;
+      text-transform: lowercase;
+    }
+
     &_accent {
       color: variables.$accent;
     }
 
     .icon {
+      @media screen and (max-width: 768px) {
+        max-width: 34px;
+        height: auto;
+      }
+      @media screen and (max-width: 375px) {
+        max-width: 24px;
+      }
+
       &_btn {
         margin-right: 12px;
       }
@@ -41,6 +94,10 @@
         bottom: 2px;
         right: -31px;
         translate: 0 100%;
+
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
       }
     }
 
@@ -76,6 +133,10 @@
     &_secondDate {
       @media screen and (max-width: 768px) {
         display: none;
+      }
+
+      @media screen and (max-width: 375px) {
+        display: block;
       }
     }
   }

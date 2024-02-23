@@ -39,10 +39,15 @@ const Works = () => {
     const dateStyles = initialDateRef.current!.style;
     const colorBtnStyles = colorBtnRef.current!.style;
 
-    const mediaValue = window.innerWidth <= 768 ? 0 : 1;
+    const mediaValue =
+      window.innerWidth <= 375 ? 1 : window.innerWidth <= 768 ? 0 : 1;
 
     if (activeIndex > mediaValue) {
       dateStyles.translate = "0 -500%";
+      if (!mediaValue) {
+        colorBtnStyles.translate = "0 -1000%";
+        return;
+      }
       colorBtnStyles.translate = "0 -500%";
     } else {
       dateStyles.translate = "0 0";
@@ -58,7 +63,7 @@ const Works = () => {
           <div className={s.works__dateWrapper} ref={initialDateRef}>
             <Date
               year="2002"
-              text="окончил Московский государственный академический художественный институт имени <br/> В. И. Сурикова. Дипломная работа «Цой на мотоцикле»"
+              text="окончил Московский государственный академический художественный институт имени В. И. Сурикова. Дипломная работа «Цой на мотоцикле»"
             />
           </div>
           <Link
@@ -105,7 +110,7 @@ const Works = () => {
                 <Date
                   center
                   year="2015"
-                  text="окончил Московский государственный академический художественный институт имени <br/> В. И. Сурикова. Дипломная работа «Цой на мотоцикле»"
+                  text="окончил Московский государственный академический художественный институт имени В. И. Сурикова. Дипломная работа «Цой на мотоцикле»"
                 />
               </SwiperSlide>
               <SwiperSlide
