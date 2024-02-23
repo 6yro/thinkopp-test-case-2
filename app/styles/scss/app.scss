@@ -1,0 +1,49 @@
+@use "variables";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: variables.$primaryBg;
+  color: variables.$secondary;
+  font-size: 16px;
+  line-height: 22.4px;
+  letter-spacing: -0.48px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 12.5px;
+    line-height: 17.5px;
+  }
+}
+
+.wrapper {
+  max-width: 1920px;
+  padding: 0 40px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 32px;
+  }
+
+  @media screen and (max-width: 375px) {
+    padding: 0 16px;
+  }
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+}

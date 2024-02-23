@@ -1,0 +1,33 @@
+@use "variables";
+
+.timeline {
+  position: absolute;
+  z-index: 3;
+
+  @media screen and (max-width: 768px) {
+    top: 45px;
+    left: 0px;
+  }
+
+  @media screen and (max-width: 375px) {
+    top: 28.5px;
+    left: 0px;
+  }
+
+  hr {
+    margin-top: 20px;
+    border: 1px solid variables.$accent;
+    border-left: none;
+    border-right: none;
+    width: 8px;
+
+    @media screen and (max-width: 768px) {
+      transform: scaleY(50%);
+    }
+
+    @media screen and (max-width: 375px) {
+      transform: none;
+      width: 4px;
+    }
+  }
+}
