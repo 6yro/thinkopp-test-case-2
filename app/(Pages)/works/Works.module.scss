@@ -10,11 +10,11 @@
   }
 
   @media screen and (max-width: 768px) {
-    background: 0 300% / contain no-repeat url("../../assets/works/tsoy.png");
+    background: bottom / 90% no-repeat url("../../assets/works/tsoy.png");
     height: calc(100vh - 64px);
 
     &_colorImg {
-      background: 0 300% / contain no-repeat
+      background: bottom / 90% no-repeat
         url("../../assets/works/tsoy_color.png");
     }
   }
