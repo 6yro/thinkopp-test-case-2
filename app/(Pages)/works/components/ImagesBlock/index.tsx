@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import clsx from "clsx";
 
@@ -10,7 +11,6 @@ import quoteMarksImg from "@/app/assets/uikit/quote-marks.svg";
 import quoteCursorImg from "@/app/assets/uikit/cursor.svg";
 
 import s from "./ImagesBlock.module.scss";
-import Link from "next/link";
 
 const ImagesBlock = () => {
   return (
@@ -24,12 +24,12 @@ const ImagesBlock = () => {
               alt=""
             />
             <div className={s.imagesBlock__top}>
-              <figure className={s.imagesBlock__imgWrapper}>
+              <div className={s.imagesBlock__imgWrapper}>
                 <Image src={inCityImg} alt="Памятник Виктору Цою" />
-                <figcaption className={s.imagesBlock__imgText}>
+                <p className={s.imagesBlock__imgText}>
                   в городе Окуловка, Новгородская область
-                </figcaption>
-              </figure>
+                </p>
+              </div>
               <div className={s.imagesBlock__textBlock}>
                 <p className={s.imagesBlock__text}>
                   Нужна была немалая смелость, чтобы разместить памятник в
@@ -58,28 +58,26 @@ const ImagesBlock = () => {
               </div>
             </div>
             <div className={s.imagesBlock__bottom}>
-              <figure
+              <div
                 className={clsx(
                   s.imagesBlock__imgWrapper,
                   s.imagesBlock__imgWrapper_bottom
                 )}
               >
                 <Image src={monumentDetailsImg} alt="Детали памятника" />
-                <figcaption className={s.imagesBlock__imgText}>
-                  Детали памятника
-                </figcaption>
-              </figure>
-              <figure
+                <p className={s.imagesBlock__imgText}>Детали памятника</p>
+              </div>
+              <div
                 className={clsx(
                   s.imagesBlock__imgWrapper,
                   s.imagesBlock__imgWrapper_bottom
                 )}
               >
                 <Image src={inProcess} alt="Процесс установки памятника" />
-                <figcaption className={s.imagesBlock__imgText}>
+                <p className={s.imagesBlock__imgText}>
                   В процессе установки памятника
-                </figcaption>
-              </figure>
+                </p>
+              </div>
             </div>
           </div>
         </div>

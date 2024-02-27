@@ -1,38 +1,17 @@
 @use "variables";
 
 .imagesBlock {
-  height: 100%;
+  top: 88px;
+  position: relative;
 
   &__inner {
-    height: calc(100vh - 88px);
     position: relative;
-    overflow: auto;
-    padding-top: 100px;
-    margin-top: -100px;
-    padding-right: 40px;
-    margin-right: -40px;
-
-    &::-webkit-scrollbar {
-      width: 4px;
-      border-radius: 10px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      width: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-    }
   }
 
   &__quoteMarks {
     position: absolute;
-    top: 100px;
-    right: 11%;
+    top: 0;
+    right: 7%;
     translate: -11% -55%;
     z-index: 1;
 
@@ -84,13 +63,17 @@
   }
 
   &__imgWrapper {
-    display: flex;
+    background-color: transparent;
     position: relative;
     font-size: 0;
     max-width: 680px;
+    line-height: 0;
 
     &_bottom {
-      max-width: 478px;
+      margin-bottom: 50px;
+      img {
+        max-width: 478px;
+      }
 
       &:first-of-type {
         margin-right: 64px;
@@ -104,10 +87,10 @@
   }
 
   &__imgText {
+    position: absolute;
     line-height: 11px;
     color: variables.$teritrary;
     font-size: 16px;
-    position: absolute;
     bottom: -16px;
     translate: 0 100%;
   }
@@ -115,6 +98,5 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
   }
 }

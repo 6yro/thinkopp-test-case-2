@@ -31,7 +31,7 @@
 
   &__dateWrapper {
     transition: 300ms;
-    margin-left: -30px;
+    margin-left: -38px;
     padding-top: 40px;
     width: fit-content;
     position: relative;
@@ -120,7 +120,12 @@
   }
 
   &__slide {
-    top: 88px;
+    // top: 88px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     &_gradient {
       background: linear-gradient(
